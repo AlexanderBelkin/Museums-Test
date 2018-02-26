@@ -1,4 +1,4 @@
-package com.example.air.museums.adapters
+package com.example.air.museums.adapters.museum_adapter
 
 import android.annotation.SuppressLint
 import android.content.Context

@@ -1,4 +1,4 @@
-package com.example.air.museums.adapters
+package com.example.air.museums.adapters.museum_adapter
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
