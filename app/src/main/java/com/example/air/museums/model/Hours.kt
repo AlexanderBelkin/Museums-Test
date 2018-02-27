@@ -5,23 +5,23 @@ import com.google.gson.annotations.SerializedName
 data class Hours(
 
 	@field:SerializedName("Monday")
-	val monday: String? = null,
+    var monday: String? = null,
 
 	@field:SerializedName("Thursday")
-	val thursday: String? = null,
+	var thursday: String? = null,
 
 	@field:SerializedName("Friday")
-	val friday: String? = null,
+	var friday: String? = null,
 
 	@field:SerializedName("Sunday")
-	val sunday: String? = null,
+	var sunday: String? = null,
 
 	@field:SerializedName("Wednesday")
-	val wednesday: String? = null,
+	var wednesday: String? = null,
 
 	@field:SerializedName("Tuesday")
-	val tuesday: String? = null,
+	var tuesday: String? = null,
 
 	@field:SerializedName("Saturday")
-	val saturday: String? = null
+	var saturday: String? = null
 )

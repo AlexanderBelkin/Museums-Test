@@ -1,4 +1,4 @@
-package com.example.air.museums.adapters
+package com.example.air.museums.adapters.museum_adapter
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -14,6 +14,7 @@ class MuseumViewHolder internal constructor(itemView: View,
     var imageLink = itemView.findViewById<ImageView>(R.id.image_museum)
     var addressPlace = itemView.findViewById<TextView>(R.id.address_place)
     var namePlace = itemView.findViewById<TextView>(R.id.name_place)
+    var badgeView = itemView.findViewById<View>(R.id.badge_opened)
 
     init {
         itemView.setOnClickListener(this)
