@@ -1,5 +1,6 @@
 package com.example.air.museums.ui.museum
 
+import android.location.Geocoder
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import com.example.air.museums.R
@@ -10,6 +11,7 @@ import com.example.air.museums.ui.base.BaseActivity
 import com.example.air.museums.ui.detail_museum.DetaileActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import timber.log.Timber
+import java.util.*
 import javax.inject.Inject
 
 class MuseumActivity : BaseActivity(),
@@ -25,6 +27,8 @@ class MuseumActivity : BaseActivity(),
         getActivityComponents().inject(this)
         presenter.onAttach(this)
         presenter.getMuseumData()
+
+
     }
 
     override fun Success(listData: ArrayList<MuseumResponse>) {

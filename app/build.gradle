@@ -35,7 +35,7 @@ android {
     packagingOptions {
         exclude 'META-INF/rxjava.properties'
     }
-
+    buildToolsVersion '26.0.2'
 }
 
 
@@ -46,6 +46,8 @@ dependencies {
 
     implementation "com.android.support:support-v4:$rootProject.supportLibraryVersion"
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.google.android.gms:play-services-maps:11.8.0'
+    implementation 'com.android.support:appcompat-v7:26.1.0'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$rootProject.ext.kotlin_version"
 
     //Support

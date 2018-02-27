@@ -8,6 +8,7 @@ import com.example.air.museums.di.components.DaggerApplicationComponent
 import com.example.air.museums.di.module.AppModule
 import com.facebook.stetho.Stetho
 import com.pixplicity.easyprefs.library.Prefs
+import timber.log.Timber
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig
 import javax.inject.Inject
 
@@ -24,7 +25,7 @@ class MuseumsApp : Application() {
                 .appModule(AppModule(this)).build()
 
         appComponent.inject(this)
-
+        Timber.plant(Timber.DebugTree())
         AndroidNetworking.initialize(applicationContext)
         CalligraphyConfig.initDefault(calligraphyConfig)
         Stetho.initializeWithDefaults(this)

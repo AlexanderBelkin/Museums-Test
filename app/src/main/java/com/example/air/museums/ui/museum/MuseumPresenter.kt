@@ -1,6 +1,7 @@
 package com.example.air.museums.ui.museum
 
 import com.example.air.museums.data.IDataManager
+import com.example.air.museums.mapper.TimeMapper
 import com.example.air.museums.model.MuseumResponse
 import com.example.air.museums.ui.base.BasePresenter
 import com.example.air.museums.utils.rx.ISchedulerProvider
@@ -22,8 +23,8 @@ class MuseumPresenter<V : IMuseumView> @Inject
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({ listData ->
-                    data = listData
-                    mvpView?.Success(listData)
+                    data = TimeMapper.map(listData)
+                    mvpView?.Success(data)
                 }, {
                     throwable: Throwable -> mvpView?.onError(throwable.stackTrace.toString())
                 })

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Museums</string>
+    <string name="title_activity_maps_dialog">Map</string>
 </resources>
